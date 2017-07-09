@@ -6,7 +6,7 @@
 #    By: wphokomp <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/07/09 14:24:15 by wphokomp          #+#    #+#              #
-#    Updated: 2017/07/09 15:31:16 by wphokomp         ###   ########.fr        #
+#    Updated: 2017/07/09 16:15:50 by wphokomp         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,7 @@ all: $(NAME)
 $(NAME): $(SRC)
 	@make -C libft/ fclean && make -C libft/ all
 	@$(FLAGS) $(NAME) $(SRC) libft/libft.a
+	@rm -fr ft_ls.d*
 
 clean:
 	@make -C libft/ fclean
